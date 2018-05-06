@@ -52,8 +52,7 @@ public final class TeleporterInventory implements IInventory {
     @Override
     public void showInventory(Player player) {
         ItemStack[] contents = this.inventory.getContents();
-        inventory.clear();
-        player.openInventory(inventory);
+        player.openInventory(new InventoryBuilder(5, "§bTeleporter").build());
         new BukkitRunnable() {
             int i = 0;
 
